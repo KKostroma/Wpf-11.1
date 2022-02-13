@@ -9,7 +9,21 @@
     <StackPanel Background="White">
         <Path Fill="Red" Stroke="Black" Height="285" Stretch="Fill">
             <Path.Data>
-                <EllipseGeometry RadiusX="10" RadiusY="10" Center="50,100"/>
+                <CombinedGeometry>
+                    <CombinedGeometry.Geometry1>
+                        <GeometryGroup>
+                            <EllipseGeometry RadiusX="30" RadiusY="30" Center="50,100"/>
+                            <EllipseGeometry RadiusX="25" RadiusY="25" Center="50,100"/>
+                        </GeometryGroup>
+                    </CombinedGeometry.Geometry1>
+                    <CombinedGeometry.Geometry2>
+                        <RectangleGeometry Rect="105,10,5,55">
+                            <RectangleGeometry.Transform>
+                                <RotateTransform Angle="45"/>
+                            </RectangleGeometry.Transform>
+                        </RectangleGeometry>
+                    </CombinedGeometry.Geometry2>
+                </CombinedGeometry>
             </Path.Data>
         </Path>
     </StackPanel>
